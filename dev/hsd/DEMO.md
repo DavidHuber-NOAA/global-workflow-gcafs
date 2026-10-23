@@ -78,27 +78,7 @@ git clone git@github.com:<ORG>/global-workflow-gcafs.git gcafs-tier1
 cd gcafs-tier1
 
 # Tier 1 only builds what it contains
-sorc/build_all.sh -h          # lists only: gcafs and gdas
-
-git submodule update --init --recursive -j 10
-cd sorc
-./build_all.sh all            # Builds only ufs-gcafs, gdas, and global-workflow dependencies
-# Generating build.xml for building global-workflow programs ...
-# NOTICE: skipping 'gsi_monitor', missing sorc/build_gsi_monitor.sh, sorc/gsi_monitor.fd
-# NOTICE: skipping 'gefs_ww3_prepost', missing sorc/build_ww3prepost.sh
-# Building on head node using up to 20 cores ...
-# -----------------------------------
-# -----------------------------------
-# | System             | Status     |
-# -----------------------------------
-# | gcafs_model        | SUCCEEDED  |
-# | nexus              | SUCCEEDED  |
-# | gfs_utils          | SUCCEEDED  |
-# | gdas               | SUCCEEDED  |
-# | ufs_utils          | SUCCEEDED  |
-# | gsi_utils          | SUCCEEDED  |
-# | upp                | SUCCEEDED  |
-# -----------------------------------
+sorc/build_all.sh -h | head          # lists only: gcafs
 ```
 
 Notes:

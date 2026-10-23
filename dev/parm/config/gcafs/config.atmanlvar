@@ -1,1 +1,11 @@
-../gfs/config.atmanlvar
+#! /usr/bin/env bash
+
+########## config.atmanlvar ##########
+# Atm Var Analysis specific
+
+echo "BEGIN: config.atmanlvar"
+
+# Get task specific resources
+. "${EXPDIR}/config.resources" atmanlvar
+
+echo "END: config.atmanlvar"
